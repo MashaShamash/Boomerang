@@ -17,6 +17,8 @@ class Game {
     this.enemy = new Enemy();
     this.view = new View();
     this.track = [];
+    this.track = [];
+    this.track1 = [];
     this.regenerateTrack();
   }
 

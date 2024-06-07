@@ -1,12 +1,10 @@
 // Наш герой.
 
 class Hero {
-  constructor({ position }) {
-
-    const players = ['🧖','👸🏽','🧟‍♀️','🧞‍♀️','🦸🏽‍♀️','🐱'];
-    this.player = players[Math.floor(Math.random() * players.length)];
-   
-    this.position = position;
+  constructor(args = {}) {
+    // this.skin = [];
+    this.skin = "🧨";
+    this.position = args.position || 0;
   }
 
   moveLeft() {
@@ -23,10 +21,27 @@ class Hero {
     // Атакуем.
     this.boomerang.fly();
   }
+  generateHero() {
+    this.skin = [
+      "🍧",
+      "🍹",
+      "🍭",
+      "🍰",
+      "🍓",
+      "🍼",
+      "🥃",
+      "🚬",
+      "💊",
+      "🌶️",
+      "🍌",
+      "🧃",
+    ];
+    this.skin = this.skin[Math.floor(Math.random() * hero.length)];
+  }
 
   die() {
-    this.skin = '💀';
-    console.log('YOU ARE DEAD!💀');
+    this.skin = "💀";
+    console.log("YOU ARE DEAD!💀");
     process.exit();
   }
 }
