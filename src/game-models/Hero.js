@@ -1,25 +1,10 @@
 // Наш герой.
 
 class Hero {
-  constructor() {
- writeIt// this.skin = [];
-    this.skin = this.skin()
-    this.position =0;
-
-
-    
-
-    
-   
-   
+  constructor(args = {}) {
+    this.skin = "🤤"; // можете использовать любые emoji '💃'
+    this.position = args.position || 0;
   }
-  skin() {
-   const players = ['🧖','👸🏽','🧟‍♀️','🧞‍♀️','🦸🏽‍♀️','🐱'];
-   this.player = players[Math.floor(Math.random() * players.length)];
-
-  }
-
- 
 
   moveLeft() {
     // Идём влево.
@@ -35,10 +20,10 @@ class Hero {
     // Атакуем.
     this.boomerang.fly();
   }
-  
+
   die() {
-    this.skin = "💀";
-    console.log("YOU ARE DEAD!💀");
+    this.skin = "🥹";
+    console.log("YOU ARE DEAD!");
     process.exit();
   }
 }

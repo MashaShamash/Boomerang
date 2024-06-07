@@ -1,26 +1,14 @@
 // Враг.
+// const play = require('play-sound')();
 
 class Enemy {
   constructor(args = {}) {
     this.generateSkin();
-    this.position = 20;
+    this.position = args.position;
   }
 
   generateSkin() {
-    const skins = [
-      "🍧",
-      "🍹",
-      "🍭",
-      "🍰",
-      "🍓",
-      "🍼",
-      "🥃",
-      "🚬",
-      "💊",
-      "🌶️",
-      "🍌",
-      "🧃",
-    ];
+    const skins = ["🥞", "🍦", "🍟", "🥟", "🍤", "🍼", "🍹"];
     this.skin = skins[Math.floor(Math.random() * skins.length)];
   }
 
@@ -30,9 +18,9 @@ class Enemy {
   }
 
   die() {
-    this.skin = "💀";
-    // this.position = this.position.args;
-    console.log("Enemy is dead!");
+    this.skin = "🥹";
+    // play.play('./src/sounds/kill1.mp3');
+    console.log("ням-ням");
   }
 }
 
