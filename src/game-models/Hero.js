@@ -2,10 +2,24 @@
 
 class Hero {
   constructor() {
-    // this.skin = [];
+ writeIt// this.skin = [];
     this.skin = this.skin()
-    this.position =20;
+    this.position =0;
+
+
+    
+
+    
+   
+   
   }
+  skin() {
+   const players = ['🧖','👸🏽','🧟‍♀️','🧞‍♀️','🦸🏽‍♀️','🐱'];
+   this.player = players[Math.floor(Math.random() * players.length)];
+
+  }
+
+ 
 
   moveLeft() {
     // Идём влево.
@@ -21,24 +35,7 @@ class Hero {
     // Атакуем.
     this.boomerang.fly();
   }
-  skin() {
-   const emj= [
-      "🍧",
-      "🍹",
-      "🍭",
-      "🍰",
-      "🍓",
-      "🍼",
-      "🥃",
-      "🚬",
-      "💊",
-      "🌶️",
-      "🍌",
-      "🧃",
-    ];
-    this.player = this.skin[Math.floor(Math.random() * emj.length)];
-  }
-
+  
   die() {
     this.skin = "💀";
     console.log("YOU ARE DEAD!💀");
