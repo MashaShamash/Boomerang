@@ -1,13 +1,23 @@
 // Наш герой.
 
 class Hero {
-  constructor({ position }) {
+  constructor() {
+    this.skin = this.skin()
+    this.position = 0;
 
-    const players = ['🧖','👸🏽','🧟‍♀️','🧞‍♀️','🦸🏽‍♀️','🐱'];
-    this.player = players[Math.floor(Math.random() * players.length)];
+    
+
+    
    
-    this.position = position;
+   
   }
+  skin() {
+   const players = ['🧖','👸🏽','🧟‍♀️','🧞‍♀️','🦸🏽‍♀️','🐱'];
+   this.player = players[Math.floor(Math.random() * players.length)];
+
+  }
+
+ 
 
   moveLeft() {
     // Идём влево.
