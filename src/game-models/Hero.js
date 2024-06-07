@@ -2,8 +2,10 @@
 
 class Hero {
   constructor() {
+ writeIt// this.skin = [];
     this.skin = this.skin()
-    this.position = 0;
+    this.position =0;
+
 
     
 
@@ -33,10 +35,10 @@ class Hero {
     // Атакуем.
     this.boomerang.fly();
   }
-
+  
   die() {
-    this.skin = '💀';
-    console.log('YOU ARE DEAD!💀');
+    this.skin = "💀";
+    console.log("YOU ARE DEAD!💀");
     process.exit();
   }
 }
