@@ -2,7 +2,10 @@
 
 class Hero {
   constructor({ position }) {
-    this.skin = '🤠'; // можете использовать любые emoji '💃'
+
+    const players = ['🧖','👸🏽','🧟‍♀️','🧞‍♀️','🦸🏽‍♀️','🐱'];
+    this.player = players[Math.floor(Math.random() * players.length)];
+   
     this.position = position;
   }
 
