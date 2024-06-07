@@ -1,10 +1,10 @@
 // Наш герой.
 
 class Hero {
-  constructor(args = {}) {
+  constructor() {
     // this.skin = [];
-    this.skin = "🧨";
-    this.position = args.position || 0;
+    this.skin = this.skin()
+    this.position =20;
   }
 
   moveLeft() {
@@ -21,8 +21,8 @@ class Hero {
     // Атакуем.
     this.boomerang.fly();
   }
-  generateHero() {
-    this.skin = [
+  skin() {
+   const emj= [
       "🍧",
       "🍹",
       "🍭",
@@ -36,7 +36,7 @@ class Hero {
       "🍌",
       "🧃",
     ];
-    this.skin = this.skin[Math.floor(Math.random() * hero.length)];
+    this.player = this.skin[Math.floor(Math.random() * emj.length)];
   }
 
   die() {
